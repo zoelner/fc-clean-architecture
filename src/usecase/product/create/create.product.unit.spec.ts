@@ -17,7 +17,6 @@ describe("Unit test create product use case", () => {
     const { productCreateUseCase } = makeSut();
 
     const input = {
-      type: "a",
       name: "Product",
       price: 100,
     };
@@ -35,7 +34,6 @@ describe("Unit test create product use case", () => {
     const { productCreateUseCase } = makeSut();
 
     const input = {
-      type: "b",
       name: "Product B",
       price: 200,
     };
@@ -45,7 +43,7 @@ describe("Unit test create product use case", () => {
     expect(output).toEqual({
       id: expect.any(String),
       name: input.name,
-      price: 400,
+      price: 200,
     });
   });
 

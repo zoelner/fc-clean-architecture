@@ -17,8 +17,8 @@ describe("Unit test for listing product use case", () => {
   it("should list a product", async () => {
     const { usecase, repository } = makeSut();
 
-    const product1 = ProductFactory.create("a", "Product A", 100);
-    const product2 = ProductFactory.create("b", "Product B", 200);
+    const product1 = ProductFactory.create("Product A", 100);
+    const product2 = ProductFactory.create("Product B", 200);
 
     repository.findAll.mockResolvedValueOnce([product1, product2]);
 

@@ -17,7 +17,7 @@ describe("Unit test for updating product use case", () => {
   it("should update a product", async () => {
     const { usecase, repository } = makeSut();
 
-    const product = ProductFactory.create("a", "Product A", 100);
+    const product = ProductFactory.create("Product A", 100);
 
     repository.find.mockResolvedValueOnce(product);
 
